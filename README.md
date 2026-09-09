@@ -1,5 +1,6 @@
 # Student-option-pricer-Black-Scholes-
 An option pricer made by a student, using the Black-Scholes model to analyse the characteristics of an option.
+<img width="395" height="257" alt="image" src="https://github.com/user-attachments/assets/0989c158-7bab-4813-8feb-9417d10be269" />
 
 # Before explaining the development of the pricer: 
 
