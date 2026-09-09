@@ -161,3 +161,8 @@ Rho is equal to 46.02, which means that if the rate were to rise from 0% to 1%, 
 Vega is 39.70, which means that if volatility rises by 1 point, the option increases by approximately €0.40.
 
 This analysis remains very simple.
+
+# UI (tkinter)
+
+To create the user interface, I used the Tkinter library, which allows for the creation of graphical interfaces; I used `Entry` classes to capture user input. I will spare you the details of the UI design, but it was a rather long and tedious process.
+
