@@ -38,7 +38,8 @@ K the strike price set by the option,
 r the risk-free interest rate,
 σ the volatility of the stock price.
 
-The theoretical price of a call option—which grants the right, but not the obligation, to purchase asset S at value K on date T—is characterized by its payoff: (ST-K)+=max(ST-K;0)
+The theoretical price of a call option—which grants the right, but not the obligation, to purchase asset S at value K on date T—is characterized by its payoff: <img width="126" height="15" alt="image" src="https://github.com/user-attachments/assets/4a055afb-fda8-44a8-a72e-da261d6aaa5b" />
+
 
 It is given by the risk-neutral expectation of the discounted terminal payoff : C=𝔼(Payoffe-rT)
 
