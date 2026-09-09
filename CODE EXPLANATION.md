@@ -131,6 +131,8 @@ This solution is useful for understanding S and its dynamics, but for practical 
 <img width="473" height="158" alt="image" src="https://github.com/user-attachments/assets/110946fa-28a5-4d3c-b178-423c252ef82d" />
 
 "Seed" is an arbitrary variable; I chose the year 2026 because that is when the code was created, but it could have been any number. This choice ensures the same results are obtained every time the code is run.
+
 "t" represents te timestep, earlier in the code, the defaults value is 252, to represent the standard number of trading days
+
 "n" is the number of paths, its default value is 1000.
 
