@@ -81,3 +81,103 @@ Rho : Rate of change of the premium value with respect to the risk-free rate.
 
 <img width="260" height="47" alt="image" src="https://github.com/user-attachments/assets/0017cb14-a751-4786-97a1-2e33921eb784" />
 
+# Code implementation :
+
+To implement the Black Scholes formula in my code, I defined two functions, one for call and one for put :
+
+def black_scholes_call():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    d2 = d1 - sigma*math.sqrt(T)
+    C = S0*norm.cdf(d1) - K*(math.e**(-(r*T))*norm.cdf(d2))
+    return C
+
+def black_scholes_put():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    d2 = d1 - sigma*math.sqrt(T)
+    P = K*math.e**(-(r*T))*norm.cdf(-d2)-S0*norm.cdf(-d1)
+    return P
+
+and the same for the greeks : 
+
+def delta_call():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    return norm.cdf(d1)
+def delta_put():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    return norm.cdf(d1)-1
+
+def gamma_call_put():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    return ((1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2)))/(S0*sigma*math.sqrt(T))
+
+def vega_call_put():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    return S0*math.sqrt(T)*(1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2))
+
+def theta_call():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    d2 = d1 - sigma*math.sqrt(T)
+    return -((S0*(1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2))*sigma)/(2*math.sqrt(T)))-r*K*math.exp(-r*T)*norm.cdf(d2)
+def theta_put():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    d2 = d1 - sigma*math.sqrt(T)
+    return -((S0*(1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2))*sigma)/(2*math.sqrt(T)))+r*K*math.exp(-r*T)*norm.cdf(-d2)
+
+def rho_call():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    d2 = d1 - sigma*math.sqrt(T)
+    return K*T*math.exp(-r*T)*norm.cdf(d2)
+def rho_put():
+    S0 = spot_price_choice.get()
+    K = strike_price_choice.get()
+    r = rate_choice.get()
+    T = maturity_choice.get()
+    sigma = volatility_choice.get()
+    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
+    d2 = d1 - sigma*math.sqrt(T)
+    return -K*T*math.exp(-r*T)*norm.cdf(-d2)
