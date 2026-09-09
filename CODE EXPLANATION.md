@@ -136,3 +136,14 @@ This solution is useful for understanding S and its dynamics, but for practical 
 
 "n" is the number of paths, its default value is 1000.
 
+# Example
+
+Here is an example of how to use the pricer:
+
+Consider an at-the-money call option, where S0 equals K (both equal to 100), volatility is 20%, maturity is one year, and the interest rate is zero.
+
+<img width="395" height="248" alt="image" src="https://github.com/user-attachments/assets/f1096995-5b46-4a77-9729-eed0bba5e6d3" />
+
+Results : 
+
+<img width="394" height="247" alt="image" src="https://github.com/user-attachments/assets/11c3bf37-fa9e-48f9-a5d2-023221a7b65f" />
