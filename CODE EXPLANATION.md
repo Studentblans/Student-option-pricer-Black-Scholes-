@@ -53,6 +53,7 @@ Similarly, the theoretical price of a put option with a payoff : <img width="127
 
 with :
 N the cumulative distribution function of the standard normal distribution N(0,1) :
+
 <img width="149" height="78" alt="image" src="https://github.com/user-attachments/assets/89c0e191-d9d5-43b5-b2d8-af928c805e64" />
 
 
