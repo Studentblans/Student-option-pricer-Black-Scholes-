@@ -142,11 +142,11 @@ Here is an example of how to use the pricer:
 
 Consider an at-the-money call option, where S0 equals K (both equal to 100), volatility is 20%, maturity is one year, and the interest rate is zero.
 
-<img width="395" height="248" alt="image" src="https://github.com/user-attachments/assets/f1096995-5b46-4a77-9729-eed0bba5e6d3" />
+<img width="397" height="257" alt="image" src="https://github.com/user-attachments/assets/287ea9ad-30b6-4f57-a87f-eee6ede4fa84" />
 
 Results : 
 
-<img width="394" height="247" alt="image" src="https://github.com/user-attachments/assets/11c3bf37-fa9e-48f9-a5d2-023221a7b65f" />
+<img width="396" height="256" alt="image" src="https://github.com/user-attachments/assets/ccba5c96-786f-4b2a-8ed9-006baa493375" />
 
 The result for the Black-Scholes formula provided by the pricer is 7.97, which means the option is worth €7.97 for an underlying asset priced at €100.
 
