@@ -166,3 +166,6 @@ This analysis remains very simple.
 
 To create the user interface, I used the Tkinter library, which allows for the creation of graphical interfaces; I used `Entry` classes to capture user input. I will spare you the details of the UI design, but it was a rather long and tedious process.
 
+ # The limitations of the option pricer
+
+
