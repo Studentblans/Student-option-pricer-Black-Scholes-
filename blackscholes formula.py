@@ -347,8 +347,8 @@ def start_simulation():
     except ValueError:
         result_text_label.config(text="/!\\ S0 and K should be +")
 
-#------------Euler-Maruyama method (risk neutral)--------------
-#Euler-Maruyama scheme :
+#------------Geometric brownian movement method (risk neutral)--------------
+#Analytical solution of the GBM stochastic differential equation :
 def geometric_brownian_movement_simulate_path():
     try:
         seed = 2026
