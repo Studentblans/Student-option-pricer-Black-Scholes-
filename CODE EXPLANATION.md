@@ -85,16 +85,8 @@ Rho : Rate of change of the premium value with respect to the risk-free rate.
 
 To implement the Black Scholes formula in my code, I defined two functions, one for call and one for put :
 
-def black_scholes_call():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    d2 = d1 - sigma*math.sqrt(T)
-    C = S0*norm.cdf(d1) - K*(math.e**(-(r*T))*norm.cdf(d2))
-    return C
+<img width="458" height="158" alt="image" src="https://github.com/user-attachments/assets/2f7f32b4-e65b-4a29-848f-fa14eab1827f" />
+<img width="455" height="158" alt="image" src="https://github.com/user-attachments/assets/6d7abd5f-b4b8-476a-bae1-7f242a56e821" />
 
 def black_scholes_put():
     S0 = spot_price_choice.get()
