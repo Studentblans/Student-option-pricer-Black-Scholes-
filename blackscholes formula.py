@@ -34,7 +34,7 @@ window.resizable(width=False, height=False)
 
 #pricer title
 label_title = Label(window,
-                    text="Option pricer made by student (S.Blanchard)",
+                    text="Option pricer made by a student (S.Blanchard)",
                     height=1,
                     relief=None,
                     fg='black',
