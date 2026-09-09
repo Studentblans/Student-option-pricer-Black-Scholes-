@@ -5,7 +5,7 @@ An option pricer made by a student, using the Black-Scholes model to analyse the
 
 # Before explaining the development of the pricer: 
 
-If you're not an employer, you can skip right to the [section]([url](https://github.com/Studentblans/Student-option-pricer-Black-Scholes-/blob/main/CODE%20EXPLANATION.md)) explaining the code and the mathematical model.
+If you're not an employer, you can skip right to the section explaining the code and the mathematical model.
 But if you are, you may be interested in knowing more information about me, so this is a quick overview:
 
 This is my first project in Python and on GitHub.
