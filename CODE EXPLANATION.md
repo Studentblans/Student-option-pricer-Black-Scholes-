@@ -90,7 +90,7 @@ To retrieve the parameters, I use the tkinter .get() function; I will come back 
 <img width="458" height="158" alt="image" src="https://github.com/user-attachments/assets/2f7f32b4-e65b-4a29-848f-fa14eab1827f" />
 <img width="455" height="158" alt="image" src="https://github.com/user-attachments/assets/6d7abd5f-b4b8-476a-bae1-7f242a56e821" />
 
-Same for the greeks : 
+Same for greeks : 
 
 <img width="458" height="245" alt="image" src="https://github.com/user-attachments/assets/df535f29-fea9-45a8-89ed-906b681e6085" />
 <img width="529" height="128" alt="image" src="https://github.com/user-attachments/assets/9a7406dc-8a6f-4dfe-b38b-15829bee0b21" />
