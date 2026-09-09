@@ -1,4 +1,4 @@
-# Explanation of the code and the mathematic model behind it :
+# Explanation of the code and the mathematic model behind it
 
 So, I learn a few weeks ago what is an "option", I never heard of it in my classes at the university and I found the concept really interesting, especially the mathematic approach to analyse an option, that's what leads me to develop this option pricer (and to test my knowledge on the subject).
 
@@ -81,7 +81,7 @@ Rho : Rate of change of the premium value with respect to the risk-free rate.
 
 <img width="260" height="47" alt="image" src="https://github.com/user-attachments/assets/0017cb14-a751-4786-97a1-2e33921eb784" />
 
-# Code implementation :
+# Code implementation
 
 To implement the Black Scholes formula in my code, I defined two functions, one for call and one for put :
 
@@ -98,3 +98,4 @@ Same for greeks :
 <img width="773" height="275" alt="image" src="https://github.com/user-attachments/assets/f94f1d9f-9dbc-4897-b162-f9b3fdfbcaf3" />
 <img width="449" height="272" alt="image" src="https://github.com/user-attachments/assets/3fe69c79-85ec-43a3-87dc-cbc914f235ca" />
 
+# Geometric Brownian movement - Paths simulation
