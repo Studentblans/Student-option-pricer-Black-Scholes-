@@ -121,9 +121,11 @@ and by integrating the equation, we obtain the exact solution:
 
 <img width="158" height="23" alt="image" src="https://github.com/user-attachments/assets/5ca57e83-8913-4e48-8935-bb491daea2fe" />
 
-This solution is useful for understanding S and its dynamics, but for practical purposes, it is approximated using the Euler-Maruyama scheme.
+Since geometric Brownian motion has a closed-form solution, we can simulate it exactly at each time step, with no discretization error.
 
 <img width="175" height="24" alt="image" src="https://github.com/user-attachments/assets/3f3b75f7-3327-488a-aad9-9417feda5383" />
+
+φ is a random variable drawn from a standard normal distribution.
 
 # Implementation of the Geometric Brownian movement in python :
 
