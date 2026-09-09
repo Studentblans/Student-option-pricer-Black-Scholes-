@@ -84,6 +84,7 @@ Rho : Rate of change of the premium value with respect to the risk-free rate.
 # Code implementation :
 
 To implement the Black Scholes formula in my code, I defined two functions, one for call and one for put :
+To retrieve the parameters, I use the tkinter .get() function; I will come back to this in the UI section.
 
 <img width="458" height="158" alt="image" src="https://github.com/user-attachments/assets/2f7f32b4-e65b-4a29-848f-fa14eab1827f" />
 <img width="455" height="158" alt="image" src="https://github.com/user-attachments/assets/6d7abd5f-b4b8-476a-bae1-7f242a56e821" />
