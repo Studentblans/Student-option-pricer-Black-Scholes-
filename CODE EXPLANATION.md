@@ -88,88 +88,11 @@ To implement the Black Scholes formula in my code, I defined two functions, one 
 <img width="458" height="158" alt="image" src="https://github.com/user-attachments/assets/2f7f32b4-e65b-4a29-848f-fa14eab1827f" />
 <img width="455" height="158" alt="image" src="https://github.com/user-attachments/assets/6d7abd5f-b4b8-476a-bae1-7f242a56e821" />
 
-def black_scholes_put():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    d2 = d1 - sigma*math.sqrt(T)
-    P = K*math.e**(-(r*T))*norm.cdf(-d2)-S0*norm.cdf(-d1)
-    return P
-
 and the same for the greeks : 
 
-def delta_call():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    return norm.cdf(d1)
-def delta_put():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    return norm.cdf(d1)-1
+<img width="458" height="245" alt="image" src="https://github.com/user-attachments/assets/df535f29-fea9-45a8-89ed-906b681e6085" />
+<img width="529" height="128" alt="image" src="https://github.com/user-attachments/assets/9a7406dc-8a6f-4dfe-b38b-15829bee0b21" />
+<img width="470" height="128" alt="image" src="https://github.com/user-attachments/assets/d0fe62f8-55f9-4781-b219-e60735e0add2" />
+<img width="773" height="275" alt="image" src="https://github.com/user-attachments/assets/f94f1d9f-9dbc-4897-b162-f9b3fdfbcaf3" />
+<img width="449" height="272" alt="image" src="https://github.com/user-attachments/assets/3fe69c79-85ec-43a3-87dc-cbc914f235ca" />
 
-def gamma_call_put():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    return ((1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2)))/(S0*sigma*math.sqrt(T))
-
-def vega_call_put():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    return S0*math.sqrt(T)*(1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2))
-
-def theta_call():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    d2 = d1 - sigma*math.sqrt(T)
-    return -((S0*(1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2))*sigma)/(2*math.sqrt(T)))-r*K*math.exp(-r*T)*norm.cdf(d2)
-def theta_put():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    d2 = d1 - sigma*math.sqrt(T)
-    return -((S0*(1/(math.sqrt(2*math.pi))*math.exp(-(d1**2)/2))*sigma)/(2*math.sqrt(T)))+r*K*math.exp(-r*T)*norm.cdf(-d2)
-
-def rho_call():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    d2 = d1 - sigma*math.sqrt(T)
-    return K*T*math.exp(-r*T)*norm.cdf(d2)
-def rho_put():
-    S0 = spot_price_choice.get()
-    K = strike_price_choice.get()
-    r = rate_choice.get()
-    T = maturity_choice.get()
-    sigma = volatility_choice.get()
-    d1 = (math.log(S0/K)+((r+(1/2)*(sigma**2)))*T)/(sigma*math.sqrt(T))
-    d2 = d1 - sigma*math.sqrt(T)
-    return -K*T*math.exp(-r*T)*norm.cdf(-d2)
