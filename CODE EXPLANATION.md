@@ -17,13 +17,13 @@ The price of the underlying asset St follows a geometric Brownian motion with co
 
 <img width="140" height="25" alt="image" src="https://github.com/user-attachments/assets/cb067c33-c8f7-4795-b5b8-6e3357943de4" />
 
-there are no arbitrage opportunities;
-time is a continuous variable;
-short selling is possible;
-there are no transaction costs;
-there is a risk-free interest rate that is constant and known in advance;
-all underlying assets are perfectly divisible (for example, one can buy one-hundredth of a share);
-in the case of a stock, it pays no dividends between the time of the option's valuation and its expiration.
+There are no arbitrage opportunities;
+Time is a continuous variable;
+Short selling is possible;
+There are no transaction costs;
+There is a risk-free interest rate that is constant and known in advance;
+All underlying assets are perfectly divisible (for example, one can buy one-hundredth of a share);
+In the case of a stock, it pays no dividends between the time of the option's valuation and its expiration.
 
 This model does not represent the reality of the stock market, however, the widespread adoption of this model points to the concept of "rational mimicry" (or, in this specific case, "irrational") mimicry, which gives rise to the phenomenon of "self-fulfilling" decision-making.
 
@@ -51,7 +51,7 @@ Consider the Black-Scholes formula:
 Similarly, the theoretical price of a put option with a payoff : <img width="127" height="23" alt="image" src="https://github.com/user-attachments/assets/8f2bd83d-121c-4610-b2dc-633a1dbf7410" /> is given by: 
 <img width="218" height="23" alt="image" src="https://github.com/user-attachments/assets/c5700a29-28c5-4936-a207-8b57110c0920" />
 
-with :
+With :
 N the cumulative distribution function of the standard normal distribution N(0,1) :
 
 <img width="149" height="78" alt="image" src="https://github.com/user-attachments/assets/89c0e191-d9d5-43b5-b2d8-af928c805e64" />
