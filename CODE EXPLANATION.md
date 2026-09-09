@@ -105,7 +105,7 @@ To simulate the price paths of an asset, we solve a stochastic differential equa
 
 <img width="110" height="20" alt="image" src="https://github.com/user-attachments/assets/1c1c437d-2a8d-406f-b76b-dd3b9455a9d6" />
 
-(You will notice that  has been replaced by r to represent the risk-free interest rate (which replaces the constant drift).
+(You will notice that μ has been replaced by r to represent the risk-free interest rate (which replaces the constant drift).
 
 We therefore reuse:
 S0 – the price of the underlying asset
