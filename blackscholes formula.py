@@ -199,13 +199,13 @@ timestep_label.grid(row=2,column=7)
 paths_number_label.grid(row=3,column=7)
 
 timestep = DoubleVar()
-timestep.set(0)
+timestep.set(252)
 timestep = Entry(window,
                  textvariable=timestep,
                  bg='white',
                  fg='black')
 paths_number = DoubleVar()
-paths_number.set(0)
+paths_number.set(1000)
 paths_number = Entry(window,
                  textvariable=paths_number,
                  bg='white',
@@ -349,7 +349,7 @@ def start_simulation():
 
 #------------Euler-Maruyama method (risk neutral)--------------
 #Euler-Maruyama scheme :
-def euler_maruyama_scheme_simulate_path():
+def geometric_brownian_movement_simulate_path():
     try:
         seed = 2026
         rng = np.random.default_rng(seed)
@@ -382,7 +382,7 @@ def euler_maruyama_scheme_simulate_path():
 #execute function
 def execute():
     start_simulation()
-    euler_maruyama_scheme_simulate_path()
+    geometric_brownian_movement_simulate_path()
 
 #start button
 start_button = Button(window,
