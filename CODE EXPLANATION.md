@@ -6,7 +6,7 @@ So, I learn a few weeks ago what is an "option", I never heard of it in my class
 
 If you're not familiar with the concept of option, here is a quick overview of it :
 
-An option is a contract between a buyer and a seller, either a call or a put, a call is a contract that gives the right (and not the obligation) for the buyer to acquire a share with an agreed price (named "striike") until a certain time noted T (also called "maturity") and a put is a contract that allows the buyer to sell a share at a certain price.
+An option is a contract between a buyer and a seller, either a call or a put, a call is a contract that gives the right (and not the obligation) for the buyer to acquire a share with an agreed price (named "strike") until a certain time noted T (also called "maturity") and a put is a contract that allows the buyer to sell a share at a certain price.
 To use his right, the buyer has to purchase the option, and its amount is called the "prime", the Black-Scholes formula is the mathematical approach to determine this prime.
 
 # Black-Scholes Model
@@ -132,7 +132,7 @@ This solution is useful for understanding S and its dynamics, but for practical 
 
 "Seed" is an arbitrary variable; I chose the year 2026 because that is when the code was created, but it could have been any number. This choice ensures the same results are obtained every time the code is run.
 
-"t" represents te timestep, earlier in the code, the defaults value is 252, to represent the standard number of trading days
+"t" represents the timestep, earlier in the code, the defaults value is 252, to represent the standard number of trading days
 
 "n" is the number of paths, its default value is 1000.
 
