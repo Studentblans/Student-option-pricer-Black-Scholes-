@@ -101,7 +101,7 @@ Same for greeks :
 # Graph Simulation (GBM)
 Using the same data employed in the Black-Scholes formula, it is possible to model a prediction of the underlying asset's price.
 
-To simulate the price paths of an asset, we use the Euler-Maruyama scheme, a numerical method to solve stochastic differential equations (SDEs). A common SDE for modeling asset prices is the geometric Brownian motion:
+To simulate the price paths of an asset, we solve a stochastic differential equations (SDE). A common SDE for modeling asset prices is the geometric Brownian motion:
 
 <img width="110" height="20" alt="image" src="https://github.com/user-attachments/assets/1c1c437d-2a8d-406f-b76b-dd3b9455a9d6" />
 
