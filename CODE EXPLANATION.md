@@ -25,7 +25,7 @@ There is a risk-free interest rate that is constant and known in advance;
 All underlying assets are perfectly divisible (for example, one can buy one-hundredth of a share);
 In the case of a stock, it pays no dividends between the time of the option's valuation and its expiration.
 
-This model does not represent the reality of the stock market, however, the widespread adoption of this model points to the concept of "rational mimicry" (or, in this specific case, "irrational") mimicry, which gives rise to the phenomenon of "self-fulfilling" decision-making.
+This model does not represent the reality of the stock market. However, some researchers have suggested that its widespread adoption — a form of market-wide mimicry — has contributed to a 'self-fulfilling' effect, where the model's assumptions become more accurate simply because most market participants rely on it.
 
 Black-Scholes Formula
 
@@ -101,11 +101,11 @@ Same for greeks :
 # Graph Simulation (GBM)
 Using the same data employed in the Black-Scholes formula, it is possible to model a prediction of the underlying asset's price.
 
-To simulate the price paths of an asset, we solve a stochastic differential equations (SDE). A common SDE for modeling asset prices is the geometric Brownian motion:
+To simulate the price paths of an asset, we solve a stochastic differential equation (SDE). A common SDE for modeling asset prices is the geometric Brownian motion:
 
 <img width="110" height="20" alt="image" src="https://github.com/user-attachments/assets/1c1c437d-2a8d-406f-b76b-dd3b9455a9d6" />
 
-(You will notice that μ has been replaced by r to represent the risk-free interest rate (which replaces the constant drift).
+(You will notice that μ has been replaced by r to represent the risk-free interest rate (which replaces the constant drift).)
 
 We therefore reuse:
 S0 – the price of the underlying asset
@@ -128,6 +128,10 @@ Since geometric Brownian motion has a closed-form solution, we can simulate it e
 φ is a random variable drawn from a standard normal distribution.
 
 # Implementation of the Geometric Brownian movement in python :
+
+We have previously established the mathematical formula for geometric Brownian motion; it is now time to incorporate it into the pricer's code.
+
+The line S[i+1] = S[i]*np.exp((r-(1/2)*sigma**2)*dt+sigma*np.sqrt(dt)*w) below is the direct Python translation of this formula, where w corresponds to φ.
 
 <img width="471" height="260" alt="image" src="https://github.com/user-attachments/assets/75ea6fda-82fc-4dfd-ac8e-7e584bc35f24" />
 <img width="473" height="158" alt="image" src="https://github.com/user-attachments/assets/110946fa-28a5-4d3c-b178-423c252ef82d" />
