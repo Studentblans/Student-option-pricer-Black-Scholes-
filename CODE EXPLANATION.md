@@ -98,4 +98,39 @@ Same for greeks :
 <img width="773" height="275" alt="image" src="https://github.com/user-attachments/assets/f94f1d9f-9dbc-4897-b162-f9b3fdfbcaf3" />
 <img width="449" height="272" alt="image" src="https://github.com/user-attachments/assets/3fe69c79-85ec-43a3-87dc-cbc914f235ca" />
 
-# Geometric Brownian movement - Paths simulation
+# Graph Simulation (GBM)
+Using the same data employed in the Black-Scholes formula, it is possible to model a prediction of the underlying asset's price.
+
+To simulate the price paths of an asset, we use the Euler-Maruyama scheme, a numerical method to solve stochastic differential equations (SDEs). A common SDE for modeling asset prices is the geometric Brownian motion:
+
+<img width="110" height="20" alt="image" src="https://github.com/user-attachments/assets/1c1c437d-2a8d-406f-b76b-dd3b9455a9d6" />
+
+(You will notice that  has been replaced by r to represent the risk-free interest rate (which replaces the constant drift).
+
+We therefore reuse:
+S0 – the price of the underlying asset
+r – the risk-neutral interest rate
+σ – the volatility
+dW – the Wiener process or Brownian motion
+
+We transform S using the logarithm to simplify the equation:
+
+<img width="152" height="25" alt="image" src="https://github.com/user-attachments/assets/1c357b34-d50b-4bb9-a767-6fd459ea9a55" />
+
+and by integrating the equation, we obtain the exact solution:
+
+<img width="158" height="23" alt="image" src="https://github.com/user-attachments/assets/5ca57e83-8913-4e48-8935-bb491daea2fe" />
+
+This solution is useful for understanding S and its dynamics, but for practical purposes, it is approximated using the Euler-Maruyama scheme.
+
+<img width="175" height="24" alt="image" src="https://github.com/user-attachments/assets/3f3b75f7-3327-488a-aad9-9417feda5383" />
+
+# Implementation of the Geometric Brownian movement in python :
+
+<img width="471" height="260" alt="image" src="https://github.com/user-attachments/assets/75ea6fda-82fc-4dfd-ac8e-7e584bc35f24" />
+<img width="473" height="158" alt="image" src="https://github.com/user-attachments/assets/110946fa-28a5-4d3c-b178-423c252ef82d" />
+
+"Seed" is an arbitrary variable; I chose the year 2026 because that is when the code was created, but it could have been any number. This choice ensures the same results are obtained every time the code is run.
+"t" represents te timestep, earlier in the code, the defaults value is 252, to represent the standard number of trading days
+"n" is the number of paths, its default value is 1000.
+
