@@ -14,6 +14,7 @@ To use his right, the buyer has to purchase the option, and its amount is called
 The assumptions of the model :
 
 The price of the underlying asset St follows a geometric Brownian motion with constant volatility σ and constant drift μ:
+
 <img width="281" height="157" alt="image" src="https://github.com/user-attachments/assets/31ee796f-afd2-4387-833c-29fa7eb31f7d" />
 
 there are no arbitrage opportunities;
