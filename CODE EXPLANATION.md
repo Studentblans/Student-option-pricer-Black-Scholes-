@@ -15,7 +15,7 @@ The assumptions of the model :
 
 The price of the underlying asset St follows a geometric Brownian motion with constant volatility σ and constant drift μ:
 
-<img width="281" height="157" alt="image" src="https://github.com/user-attachments/assets/31ee796f-afd2-4387-833c-29fa7eb31f7d" />
+<img width="140" height="25" alt="image" src="https://github.com/user-attachments/assets/cb067c33-c8f7-4795-b5b8-6e3357943de4" />
 
 there are no arbitrage opportunities;
 time is a continuous variable;
