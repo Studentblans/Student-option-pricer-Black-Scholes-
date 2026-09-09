@@ -147,3 +147,17 @@ Consider an at-the-money call option, where S0 equals K (both equal to 100), vol
 Results : 
 
 <img width="394" height="247" alt="image" src="https://github.com/user-attachments/assets/11c3bf37-fa9e-48f9-a5d2-023221a7b65f" />
+
+The result for the Black-Scholes formula provided by the pricer is 7.97, which means the option is worth €7.97 for an underlying asset priced at €100.
+
+Delta is equal to 0.54, which means that for every €1 change in the underlying asset, the call option will change by €0.54.
+
+Gamma is equal to 0.02; since it indicates the rate at which Delta changes as the underlying asset moves, if the underlying asset increases by €1, Delta will increase by +(0.54 + 0.02), resulting in €0.56.
+
+Theta is equal to -€3.97, so the option loses approximately €3.97 per year.
+
+Rho is equal to 46.02, which means that if the rate were to rise from 0% to 1%, the option would gain approximately €0.46.
+
+Vega is 39.70, which means that if volatility rises by 1 point, the option increases by approximately €0.40.
+
+This analysis remains very simple.
