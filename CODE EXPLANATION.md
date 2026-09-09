@@ -168,4 +168,13 @@ To create the user interface, I used the Tkinter library, which allows for the c
 
  # The limitations of the option pricer
 
+The model itself :
+
+The Black-Scholes model and its formula remain a subject of considerable debate within the economics community.
+Its underlying logic is viewed as overly simplistic, and it is true that the model's approach is disconnected from the realities of financial markets.
+Critics point out that, because the model is based on a normal distribution (or Gaussian distribution), it underestimates "improbable" events such as financial crises.
+Furthermore, this pricer only calculates European options (extending it to American options could be an avenue for exploration).
+Alternatively, regarding the absence of dividends: for stocks that do not pay them, the pricing model works, but as soon as a stock begins paying dividends, the price becomes distorted.
+
+
 
