@@ -57,31 +57,27 @@ N the cumulative distribution function of the standard normal distribution N(0,1
 <img width="149" height="78" alt="image" src="https://github.com/user-attachments/assets/89c0e191-d9d5-43b5-b2d8-af928c805e64" />
 
 
-2 - Option Greeks
+# Option Greeks
 
 The "Greeks" measure an option's price sensitivity to each parameter of the Black-Scholes model. It's 5 indicators : delta, gamma, theta, vega and rho.
 
 Delta :  first derivative of the option price with respect to the price of the underlying asset
 
-
-=∂∂S
-call=N(d1)	put=N(d1)-1
+<img width="163" height="46" alt="image" src="https://github.com/user-attachments/assets/538b9cbd-49f9-4257-8da5-c51f4fe63f3f" />
 
 Gamma : represents the convexity or curvature of an option's price in relation to the price of the underlying asset. It indicates whether the option's price tends to move faster or slower than the price of the underlying asset.
 
-γcall=γput=∂2P∂S2=N'(d1)S0T
+<img width="125" height="32" alt="image" src="https://github.com/user-attachments/assets/81086489-a365-4997-8384-7a1d26dc179a" />
 
 Theta : The cost (or gain) associated with the passage of time for an options portfolio. It measures how the passage of time affects the value of an option.
 
-
-=-∂P∂T
-call=-SN'(d1)2T-rKe-rTN(d2)		put=-SN'(d1)2T+rKe-rTN(-d2)
+<img width="345" height="58" alt="image" src="https://github.com/user-attachments/assets/c5e9edc3-0a74-4a41-a329-966ed0dfdd4a" />
 
 Vega : measurement of sensitivity to implied volatility
 
-call=put=∂P∂=STN'(d1)
+<img width="146" height="26" alt="image" src="https://github.com/user-attachments/assets/4c1960eb-6f3c-4066-96ed-cd345b348eb3" />
 
 Rho : Rate of change of the premium value with respect to the risk-free rate.
 
-=∂P∂r
-call=KTe-rTN(d2)		put=-KTe-rTN(-d2)
+<img width="260" height="47" alt="image" src="https://github.com/user-attachments/assets/0017cb14-a751-4786-97a1-2e33921eb784" />
+
