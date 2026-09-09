@@ -42,12 +42,15 @@ The theoretical price of a call option—which grants the right, but not the obl
 
 
 
-It is given by the risk-neutral expectation of the discounted terminal payoff : C=𝔼(Payoffe-rT)
+It is given by the risk-neutral expectation of the discounted terminal payoff : <img width="103" height="20" alt="image" src="https://github.com/user-attachments/assets/b4ad8e61-9363-4dc3-aa85-1d6cbda09b95" />
+
 
 Consider the Black-Scholes formula:
-C(S0,K,r,T,)=S0N(d1)-Ke-rTN(d2)
-Similarly, the theoretical price of a put option with a payoff : (K-ST)+=max(K-ST;0) is given by: 
-P(S0,K,r,T,)=-S0N(-d1)+Ke-rTN(-d2)
+<img width="186" height="25" alt="image" src="https://github.com/user-attachments/assets/3162da27-cb91-43f9-b501-6bbb69e40054" />
+
+Similarly, the theoretical price of a put option with a payoff : <img width="127" height="23" alt="image" src="https://github.com/user-attachments/assets/8f2bd83d-121c-4610-b2dc-633a1dbf7410" /> is given by: 
+<img width="218" height="23" alt="image" src="https://github.com/user-attachments/assets/c5700a29-28c5-4936-a207-8b57110c0920" />
+
 with :
 N the cumulative distribution function of the standard normal distribution N(0,1) :
 N(x)=-x12e-12u2du
