@@ -11,7 +11,7 @@ To use his right, the buyer has to purchase the option, and its amount is called
 
 # Black-Scholes Model
 
-The assumptions of the model :
+## The assumptions of the model 
 
 The price of the underlying asset St follows a geometric Brownian motion with constant volatility σ and constant drift μ:
 
@@ -27,7 +27,7 @@ In the case of a stock, it pays no dividends between the time of the option's va
 
 This model does not represent the reality of the stock market. However, some researchers have suggested that its widespread adoption — a form of market-wide mimicry — has contributed to a 'self-fulfilling' effect, where the model's assumptions become more accurate simply because most market participants rely on it.
 
-Black-Scholes Formula
+## Black-Scholes Formula
 
 As previously stated, the Black-Scholes formula is the mathematical approach to determine the prime of an option (its theoretical value) :
 
@@ -57,7 +57,7 @@ N the cumulative distribution function of the standard normal distribution N(0,1
 <img width="149" height="78" alt="image" src="https://github.com/user-attachments/assets/89c0e191-d9d5-43b5-b2d8-af928c805e64" />
 
 
-# Option Greeks
+## Option Greeks
 
 The "Greeks" measure an option's price sensitivity to each parameter of the Black-Scholes model. It's 5 indicators : delta, gamma, theta, vega and rho.
 
@@ -81,7 +81,7 @@ Rho : Rate of change of the premium value with respect to the risk-free rate.
 
 <img width="260" height="47" alt="image" src="https://github.com/user-attachments/assets/0017cb14-a751-4786-97a1-2e33921eb784" />
 
-# Code implementation
+## Code implementation
 
 To implement the Black Scholes formula in my code, I defined two functions, one for call and one for put :
 
@@ -127,7 +127,7 @@ Since geometric Brownian motion has a closed-form solution, we can simulate it e
 
 φ is a random variable drawn from a standard normal distribution.
 
-# Implementation of the Geometric Brownian movement in python :
+## Implementation of the Geometric Brownian movement in python :
 
 We have previously established the mathematical formula for geometric Brownian motion; it is now time to incorporate it into the pricer's code.
 
@@ -150,7 +150,7 @@ Consider an at-the-money call option, where S0 equals K (both equal to 100), vol
 
 <img width="397" height="257" alt="image" src="https://github.com/user-attachments/assets/287ea9ad-30b6-4f57-a87f-eee6ede4fa84" />
 
-Results : 
+## Results 
 
 <img width="396" height="256" alt="image" src="https://github.com/user-attachments/assets/ccba5c96-786f-4b2a-8ed9-006baa493375" />
 
