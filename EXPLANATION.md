@@ -221,10 +221,36 @@ Since geometric Brownian motion has a closed-form solution, we can simulate it e
 We have previously established the mathematical formula for geometric Brownian motion; it is now time to incorporate it into the pricer's code.
 
 The line S[i+1] = S[i]*np.exp((r-(1/2)*sigma**2)*dt+sigma*np.sqrt(dt)*w) below is the direct Python translation of this formula, where w corresponds to φ.
+```
+def geometric_brownian_movement_simulate_path():
+    try:
+        seed = 2026
+        rng = np.random.default_rng(seed)
+        S0 = spot_price_choice.get()
+        r = rate_choice.get()
+        T = maturity_choice.get()
+        sigma = volatility_choice.get()
+        t = int(timestep.get())
+        n = int(paths_number.get())
+        dt = T/t
+        #array to store simulated paths
+        S = np.zeros((t,n))
+        S[0] = S0
+        for i in range(0,t-1):
+            w = rng.standard_normal(n)
+            S[i+1] = S[i]*np.exp((r-(1/2)*sigma**2)*dt+sigma*np.sqrt(dt)*w)
 
-<img width="471" height="260" alt="image" src="https://github.com/user-attachments/assets/75ea6fda-82fc-4dfd-ac8e-7e584bc35f24" />
-<img width="473" height="158" alt="image" src="https://github.com/user-attachments/assets/110946fa-28a5-4d3c-b178-423c252ef82d" />
-
+        df = pd.DataFrame(S)
+        ax.clear()
+        ax.plot(df.iloc[:,:100])
+        ax.set_xlabel('Time steps')
+        ax.set_ylabel('Stock price')
+        ax.set_title('Simulated Paths')
+        fig.tight_layout()
+        canvas_graph.draw()
+    except(ValueError, ZeroDivisionError):
+        result_text_label.config(text="/!\\ t and n should be + (≥1)")
+```
 "Seed" is an arbitrary variable; I chose the year 2026 because that is when the code was created, but it could have been any number. This choice ensures the same results are obtained every time the code is run.
 
 "t" represents the timestep, earlier in the code, the defaults value is 252, to represent the standard number of trading days
