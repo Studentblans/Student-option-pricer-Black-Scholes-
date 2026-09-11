@@ -220,7 +220,7 @@ Since geometric Brownian motion has a closed-form solution, we can simulate it e
 
 We have previously established the mathematical formula for geometric Brownian motion; it is now time to incorporate it into the pricer's code.
 
-The line S[i+1] = S[i]*np.exp((r-(1/2)*sigma**2)*dt+sigma*np.sqrt(dt)*w) below is the direct Python translation of this formula, where w corresponds to φ.
+The line ```S[i+1] = S[i]*np.exp((r-(1/2)*sigma**2)*dt+sigma*np.sqrt(dt)*w)``` below is the direct Python translation of this formula, where w corresponds to φ.
 ```
 def geometric_brownian_movement_simulate_path():
     try:
