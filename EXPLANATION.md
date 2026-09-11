@@ -87,7 +87,7 @@ To implement the Black Scholes formula in my code, I defined two functions, one 
 
 To retrieve the parameters, I use the tkinter .get() function; I will come back to this in the UI section.
 
-'''
+```
 def black_scholes_call():
     S0 = spot_price_choice.get()
     K = strike_price_choice.get()
@@ -98,8 +98,8 @@ def black_scholes_call():
     d2 = d1 - sigma*math.sqrt(T)
     C = S0*norm.cdf(d1) - K*(math.e**(-(r*T))*norm.cdf(d2))
     return C
-'''
-'''
+```
+```
 def black_scholes_put():
     S0 = spot_price_choice.get()
     K = strike_price_choice.get()
@@ -110,7 +110,7 @@ def black_scholes_put():
     d2 = d1 - sigma*math.sqrt(T)
     P = K*math.e**(-(r*T))*norm.cdf(-d2)-S0*norm.cdf(-d1)
     return P
-'''
+```
 
 Same for greeks : 
 
